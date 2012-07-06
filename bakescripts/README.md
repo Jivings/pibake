@@ -44,3 +44,10 @@ the local repository with the official repositories.
 
 If this file is changed, `pibake.sh --sync` must be executed so that the
 new packages are downloaded and can be installed.
+
+### Issues
+
+ - `--bake` command is not completely tested.
+ - `--sync` yields errors. Exit conditions exist so that it can be debugged.
+   Some downloads fail, which produces installation errors.
+
