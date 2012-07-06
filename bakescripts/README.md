@@ -45,7 +45,17 @@ the local repository with the official repositories.
 If this file is changed, `pibake.sh --sync` must be executed so that the
 new packages are downloaded and can be installed.
 
-### Issues
+## repos.conf
+
+This is a list of the official Arch Linux Arm repositories used when
+synchronising. It is **not** where the packages are downloaded from. That is
+handled by the `mirror` variable in `bake_functions.sh` so that we don't nuke
+the primary servers.
+
+This file should not change unless the repository is moved. If this happens the
+new location should be updated beforehand in `pacman-mirrorlist`.
+
+## Issues
 
  - `--bake` command is not completely tested.
  - `--sync` yields errors. Exit conditions exist so that it can be debugged.
