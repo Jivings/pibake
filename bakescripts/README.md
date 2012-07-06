@@ -1,8 +1,8 @@
-## PiBakery Bash Scripts
+# PiBakery Bash Scripts
 
 These scripts are the oven of the Pi Bakery.
 
-# PiBake.sh
+## PiBake.sh
 
 Responsible for initialisation of the bakery environment for the baking of new Pi
 images, PiBake.sh can be executed with one of three different parameters:
@@ -27,3 +27,20 @@ order to keep a bleeding edge image.
 All packages in `userpkgs` will be installed to the image. These should have
 been downloaded in the `--sync` operation. This creates the custom,
 user-defined Pi image.
+
+## basepkgs
+
+This file contains a list of the packages that are installed by default on a
+base system. Included are package name and repository. This is used when
+updating the basic Pi image. 
+
+Unless it is found to be incomplete, **this file should not be edited**.
+
+## pkglist
+
+This file represents all of the packages the Pi Bakery allow to be selected as
+ingredients, as well as all of the `basepgks`. This is used for synchronising
+the local repository with the official repositories. 
+
+If this file is changed, `pibake.sh --sync` must be executed so that the
+new packages are downloaded and can be installed.
