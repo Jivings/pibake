@@ -12,4 +12,7 @@ documentation and options available in `pacman.conf`.
 ## Issues
 
  - Attempts to execute `ldconfig` under the `chroot`. This fails due to
-   cross-platform differences. Can we get rid of this call?
+   cross-platform differences. ~~Can we get rid of this call?~~ A patch
+   has been submitted to the `pacman-dev` maillist adding an
+   --no-ldconfig flag to prevent this happening.
+ - Attempts to execute installation scripts in a `chroot`.
