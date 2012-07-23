@@ -1,0 +1,71 @@
+table {
+  width: 100%;
+}
+
+#ingredient-lists {
+  width:45%;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border-bottom: 1px #E5E5EE solid;
+  border-right: 1px #E5E5EE solid;
+  background-color: #F5F5FF;
+  -webkit-transform: rotate(135deg);
+  -moz-transform:rotate(135deg);
+  -o-transform:rotate(135deg);
+  -ms-transform:rotate(135deg);
+  display: none;
+  position: fixed;
+  left: 50%;
+  margin-left: -15px;
+}
+
+td.item .description {
+  background-color: #F5F5FF;
+  display:none;
+  padding: 20px;
+  position: fixed;
+  left: 51%;
+  top: 95px;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  background: #F5F5FF;
+  border-left: 1px solid #E5E5EE;
+  z-index: -1;
+}
+
+tr.ingredient:hover {
+  
+}
+
+td.item-select {
+  width: 40px;
+}
+
+td.item-select input {
+  display:none;
+}
+
+td.item-select.selected {
+  background-image:url('../img/tick.png');
+  background-repeat: no-repeat;
+  background-size: 30px 25px;
+  background-origin: content-box;
+  padding: 4px 9px;
+}
+
+.description img {
+  width:100px;
+  height:100px;
+  border: 1px solid #E5E5EE;
+  float: right;
+  margin-top: -80px;
+}

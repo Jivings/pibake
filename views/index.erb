@@ -1,0 +1,34 @@
+    
+    <div class="container">
+      <div id="background"></div>
+      <div class="arrow"></div>
+          
+
+      <div id="ingredient-lists" class="accordion">
+
+          <% Category.all.each do |category| %>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" href="#collapse-<%= category[:id] %>"><%= category[:name] %></a>
+              </div>
+              <div id="collapse-<%= category[:id] %>" class="accordion-body collapse">
+                <table class="table table-striped ">
+                  <tbody>
+                  <% Ingredient.all(:category => category).each do |ingredient| %>
+                  <tr class="ingredient">
+                    <td class="item-select"><input type="checkbox" id="<%= ingredient[:id] %>" /></td>
+                    <td class="item"><%= ingredient[:name] %>
+                      <div class="description">
+                        <%= markdown(:"#{ingredient[:markdown]}") %> 
+                      </div>
+                    </td>
+                  </tr>
+                  <% end %>          
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <% end %>
+     </div>
+
+    </div> <!-- /container -->

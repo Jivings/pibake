@@ -1,18 +1,42 @@
-# The Pacman way
+Simple Sinatra
+==============
 
-Pacman can be configured to install packages to our Arch ARM system. Just use
-the supplied `pacman.conf`, mount the image and use the command:
+Simple Sinatra is a simple, ready-to-go setup for Sinatra. It includes such
+fabulous things as...
 
-    sudo pacman -r <mount-point> -Syu --config ./pacman.conf
+  - i18n Support!
+  - Gemfiles!
+  - Helpers!
+  - Files!
 
-This will use the `mirrorlist` found on the Arch ARM image. Further
-documentation and options available in `pacman.conf`.
+With such supercalifragilisticexpialidocious things like these, who needs
+anything else?!
 
+Installation
+============
 
-## Issues
+Not much to say here...
 
- - Attempts to execute `ldconfig` under the `chroot`. This fails due to
-   cross-platform differences. ~~Can we get rid of this call?~~ A patch
-   has been submitted to the `pacman-dev` maillist adding an
-   --no-ldconfig flag to prevent this happening.
- - Attempts to execute installation scripts in a `chroot`.
+    $ git clone git://github.com/dunsmoreb/simple-sinatra.git
+
+Then you'll want to create the relevant asset directories required by the
+shorthand asset methods.
+
+    $ mkdir public/css public/img public/js
+
+And finally we need to create the relevant directories required by
+`sinatra-sequel`.
+
+    $ mkdir -p db/migrations
+
+And then you'll probably want to delete this README.
+
+    $ rm README.md
+
+Contact
+=======
+
+You can contact me through email and nothing else. At all. Thanks for using
+this! You're awesome for it!
+
+    dunsmoreb@gmail.com
